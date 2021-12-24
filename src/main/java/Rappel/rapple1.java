@@ -16,5 +16,4 @@ public class rapple1 {
         System.out.println(r1.vitesse);
         System.out.println(r2.vitesse);
     }
-
 }

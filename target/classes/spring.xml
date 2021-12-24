@@ -1,11 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="
-http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans.xsd
-http://www.springframework.org/schema/util
-http://www.springframework.org/schema/util/spring-util.xsd">
-    <bean id="clt" class="ma.education.tp3.Client"></bean>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+    <!--<bean id="controller" class="ma.cigma1.pfe.contollers.ClientController" scope="prototype">
+        <constructor-arg  ref="service"/>
+    </bean>-->
+    <bean id="controller" class="ma.cigma1.pfe.contollers.ClientController">
+    </bean>
+    <bean id="service" class="cigma.pfe.services.ClientServiceImpl" scope="prototype">
+        <constructor-arg  ref="repository"/>
+    </bean>
+
+    <bean id="repository" class="cigma.pfe.repositories.ClientRepositoryImpl" scope="prototype"></bean>
+
 </beans>
