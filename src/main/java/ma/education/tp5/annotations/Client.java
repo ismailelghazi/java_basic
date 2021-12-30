@@ -1,7 +1,5 @@
 package ma.education.tp5.annotations;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Client implements Comparable {
 //    Integer code;
 //    String name;
@@ -36,7 +34,9 @@ Integer code;
     }
 
     @Override
-    public int compareTo(@NotNull Object o) {
+    public int compareTo(Object o) {
         return 0;
     }
+
+
 }
